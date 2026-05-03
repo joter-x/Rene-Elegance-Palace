@@ -1,0 +1,60 @@
+/* Theme Variables */
+:root {
+  --bg-color: #ffffff;
+  --text-color: #000000;
+  --card-bg: #f8f9fa;
+  --nav-bg: #333;
+  --footer-bg: #222;
+  --accent-color: #fcb900;
+  --button-buy: #28a745;
+  --button-cart: #17a2b8;
+}
+body.dark-theme {
+  --bg-color: #121212;
+  --text-color: #ffffff;
+  --card-bg: #1e1e1e;
+  --nav-bg: #000;
+  --footer-bg: #000;
+  --accent-color: #ffcc00;
+  --button-buy: #218838;
+  --button-cart: #117a8b;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin:0; padding:0;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+/* Navigation Bar */
+nav { background: var(--nav-bg); padding:10px; }
+nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; align-items:center; }
+nav ul li { margin:0 15px; }
+nav ul li a { color:#fff; text-decoration:none; font-weight:bold; }
+nav ul li a:hover { color: var(--accent-color); }
+.theme-toggle { background: var(--accent-color); color:#fff; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; }
+
+header { background: var(--nav-bg); color: var(--text-color); padding:20px; text-align:center; }
+.hero { background: var(--accent-color); color:#fff; padding:40px; text-align:center; }
+.products { display:flex; flex-wrap:wrap; justify-content:center; padding:20px; }
+.product { background: var(--card-bg); border:1px solid #ddd; border-radius:5px; margin:10px; padding:15px; width:250px; text-align:center; }
+.product img { width:100%; border-radius:5px; }
+.btn { display:inline-block; padding:10px 15px; margin:5px; border:none; border-radius:5px; cursor:pointer; font-weight:bold; }
+.toggle-btn { background: var(--accent-color); color:#fff; }
+.buy-btn { background: var(--button-buy); color:#fff; text-decoration:none; }
+.cart-btn { background: var(--button-cart); color:#fff; }
+#cart { background: var(--card-bg); padding:20px; border-top:2px solid #ddd; }
+#cart h2 { margin-top:0; }
+#cart ul { list-style:none; padding:0; }
+#cart ul li { margin:5px 0; }
+
+/* Footer Styling */
+footer { background: var(--footer-bg); color:#fff; padding:40px 20px; margin-top:40px; }
+.footer-container { display:flex; flex-wrap:wrap; justify-content:space-around; text-align:left; }
+.footer-container div { margin:15px; max-width:200px; }
+.footer-links ul { list-style:none; padding:0; }
+.footer-links ul li { margin:5px 0; }
+.footer-links a, .footer-social a { color: var(--accent-color); text-decoration:none; }
+.footer-links a:hover, .footer-social a:hover { text-decoration:underline; }
+.footer-bottom { text-align:center; margin-top:20px; border-top:1px solid #444; padding-top:10px; }

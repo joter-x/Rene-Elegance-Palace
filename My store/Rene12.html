@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>René Elegance Palace</title>
+  <div class ="brand-marquee">
+    <div class="marquee-content">
+    René Elegance Palace
+   </div>
+  </div>
+ 
+    <style>
+.brand-marquee {
+  width: 100%;
+  overflow: hidden; /* This hides the text when it goes off-screen */
+  background: #f0f0f0;
+  padding: 10px 0;
+  border-bottom: 1px solid #ddd;
+}
+
+
+.marquee-content {
+  display: inline-block;
+  white-space: nowrap;
+  font-size: 18px; /* Your "average" font size */
+  font-weight: bold;
+  padding-left: 100%; /* Starts the text off-screen to the right */
+  animation: marquee-move 15s linear infinite;
+}
+
+@keyframes marquee-move {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.brand-marquee:hover .marquee-content {
+  animation-play-state: paused;
+}
+
+
+    /* Theme Variables */
+    :root {
+      --bg-color: #ffffff;
+      --text-color: #000000;
+      --card-bg: #f8f9fa;
+      --nav-bg: #333;
+      --footer-bg: #222;
+      --accent-color: #fcb900;
+      --button-buy: #28a745;
+      --button-cart: #17a2b8;
+    }
+    body.dark-theme {
+      --bg-color: #121212;
+      --text-color: #ffffff;
+      --card-bg: #1e1e1e;
+      --nav-bg: #000;
+      --footer-bg: #000;
+      --accent-color: #ffcc00;
+      --button-buy: #218838;
+      --button-cart: #117a8b;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin:0; padding:0;
+      background-color: var(--bg-color);
+      color: var(--text-color);
+    }
+
+    /* Navigation Bar */
+    nav { background: var(--nav-bg); padding:10px; }
+    nav ul { list-style:none; margin:0; padding:0; display:flex; justify-content:center; align-items:center; }
+    nav ul li { margin:0 15px; }
+    nav ul li a { color:#fff; text-decoration:none; font-weight:bold; }
+    nav ul li a:hover { color: var(--accent-color); }
+    .theme-toggle { background: var(--accent-color); color:#fff; border:none; padding:5px 10px; border-radius:5px; cursor:pointer; }
+
+    header { background: var(--nav-bg); color: var(--text-color); padding:20px; text-align:center; }
+    .hero { background: var(--accent-color); color:#fff; padding:40px; text-align:center; }
+    .products { display:flex; flex-wrap:wrap; justify-content:center; padding:20px; }
+    .product { background: var(--card-bg); border:1px solid #ddd; border-radius:5px; margin:10px; padding:15px; width:250px; text-align:center; }
+    .product img { width:100%; border-radius:5px; }
+    .btn { display:inline-block; padding:10px 15px; margin:5px; border:none; border-radius:5px; cursor:pointer; font-weight:bold; }
+    .toggle-btn { background: var(--accent-color); color:#fff; }
+    .buy-btn { background: var(--button-buy); color:#fff; text-decoration:none; }
+    .cart-btn { background: var(--button-cart); color:#fff; }
+    #cart { background: var(--card-bg); padding:20px; border-top:2px solid #ddd; }
+    #cart h2 { margin-top:0; }
+    #cart ul { list-style:none; padding:0; }
+    #cart ul li { margin:5px 0; }
+
+    /* Footer Styling */
+    footer { background: var(--footer-bg); color:#fff; padding:40px 20px; margin-top:40px; }
+    .footer-container { display:flex; flex-wrap:wrap; justify-content:space-around; text-align:left; }
+    .footer-container div { margin:15px; max-width:200px; }
+    .footer-links ul { list-style:none; padding:0; }
+    .footer-links ul li { margin:5px 0; }
+    .footer-links a, .footer-social a { color: var(--accent-color); text-decoration:none; }
+    .footer-links a:hover, .footer-social a:hover { text-decoration:underline; }
+    .footer-bottom { text-align:center; margin-top:20px; border-top:1px solid #444; padding-top:10px; }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#shop">Shop</a></li>
+      <li><a href="#cart">Cart</a></li>
+      <li><a href="#contact">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><button onclick="toggleTheme()" class="theme-toggle">🌙 Toggle Theme</button></li>
+    </ul>
+  </nav>
+
+  <!-- Header -->
+  <header id="home">
+    <h1>René Elegance Palace</h1>
+    <p>Quality meets elegance</p>
+  </header>
+
+  <!-- Hero Banner -->
+  <section class="hero" id="shop">
+    <h2>Welcome to René Elegance Palace</h2>
+    <p>Grab now enjoy you shopping experince </p>
+  </section>
+
+  <!-- Product Grid -->
+  <section class="products">
+   
+<section class="products">
+
+  <!-- Product 1 -->
+   <div class="product">
+    <img id="PK white brandImage" src="images/6.jpg" alt="PK Front">
+    <h3>RWANDA'S AURA WHITE SHIRT</h3>
+    <p>10,000RWF.</p>
+    <button class="toggle-btn btn" onclick="toggleImage('PK white brandImage','images/6.jpg','images/pk white front.jpg')">🔄 View Front/Back</button>
+    <a href="https://wa.me/250787119203?text=Hello,%20I%20am%20interested%20in%20the%20Stylish%20Shirt"
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px;">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('PK WHITE BRAND', 10000)">➕ Add to Cart</button>
+  </div>
+
+
+  <!-- Product 2 -->
+   <div class="product">
+    <img id="PK BLACKImage" src="images/7.jpg" alt="PK BACK">
+    <h3>PK Black</h3>
+    <p>10,000RWF</p>
+    <button class="toggle-btn btn" onclick="toggleImage('PK BLACKImage','images/9.jpeg','images/PK black front.jpg')">🔄 View Front/Back</button>
+        <a href="https://wa.me/250787119203?text=Hello,%20I%20am%20interested%20in%20the%20RWANDA'S AURA%20Shirt"
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px;">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('PK BLACK BRAND', 10000)">➕ Add to Cart</button>
+  </div>
+
+
+  <!-- Product 3 -->
+  <div class="product">
+    <img id="caverinImage" src="images/8.jpeg" alt="KIND BACK">
+    <h3>CAVERINO SHOES</h3>
+    <p>15,000RWF</p>
+    <button class="toggle-btn btn" onclick="toggleImage('caverinImage','images/8.jpeg','images/caverino front.jpeg')">🔄 View Front/Back</button>
+    <a href="https://wa.me/250787119203?text=Hello,%20I%20am%20interested%20in%20the%20Men Caverino%20Shoes"
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px;">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('CAVERINO SHOES', 15000)">➕ Add to Cart</button>
+  </div>
+
+
+  <!-- Product 4 -->
+  <div class="product">
+    <img id="kindImage" src="images/9.jpeg" alt="Ubumuntu Front">
+    <h3>UBUMUNTU Brand</h3>
+    <p>10,000</p>
+    <button class="toggle-btn btn" onclick="toggleImage('kindImage','images/9.jpeg','images/kind front.jpeg')">🔄 View Front/Back</button>
+     <a href="https://wa.me/250787119203?text=Hello,%20I%20am%20interested%20in%20the%20UBUMUNTU BRAND%20Shirt"
+   target="_blank" 
+   style="display:inline-block; padding:10px 20px; background-color:#25D366; color:white; text-decoration:none; border-radius:5px;">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('Ubumuntu T-shirt', 10,000)">➕ Add to Cart</button>
+  </div>
+
+  <!-- Product 5 -->
+  <div class="product">
+    <img id="jacketImage" src="images/jacket-front.jpg" alt="Jacket Front">
+    <h3>Leather Jacket</h3>
+    <p>Stylish leather jacket.</p>
+    <button class="toggle-btn btn" onclick="toggleImage('jacketImage','images/jacket-front.jpg','images/jacket-back.jpg')">🔄 View Front/Back</button>
+    <a href="https://checkout.elemipay.com/pay/ID_FOR_JACKET" target="_blank" class="buy-btn btn">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('Leather Jacket', 75)">➕ Add to Cart</button>
+  </div>
+
+  <!-- Product 6 -->
+  <div class="product">
+    <img id="dressImage" src="images/dress-front.jpg" alt="Dress Front">
+    <h3>Summer Dress</h3>
+    <p>Light and breezy dress.</p>
+    <button class="toggle-btn btn" onclick="toggleImage('dressImage','images/dress-front.jpg','images/dress-back.jpg')">🔄 View Front/Back</button>
+    <a href="https://checkout.elemipay.com/pay/ID_FOR_DRESS" target="_blank" class="buy-btn btn">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('Summer Dress', 30)">➕ Add to Cart</button>
+  </div>
+
+  <!-- Product 7 -->
+  <div class="product">
+    <img id="sneakersImage" src="images/sneakers-front.jpg" alt="Sneakers Front">
+    <h3>White Sneakers</h3>
+    <p>Comfortable everyday sneakers.</p>
+    <button class="toggle-btn btn" onclick="toggleImage('sneakersImage','images/sneakers-front.jpg','images/sneakers-back.jpg')">🔄 View Front/Back</button>
+    <a href="https://checkout.elemipay.com/pay/ID_FOR_SNEAKERS" target="_blank" class="buy-btn btn">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('White Sneakers', 50)">➕ Add to Cart</button>
+  </div>
+
+  <!-- Product 8 -->
+  <div class="product">
+    <img id="scarfImage" src="images/scarf-front.jpg" alt="Scarf Front">
+    <h3>Wool Scarf</h3>
+    <p>Warm wool scarf.</p>
+    <button class="toggle-btn btn" onclick="toggleImage('scarfImage','images/scarf-front.jpg','images/scarf-back.jpg')">🔄 View Front/Back</button>
+    <a href="https://checkout.elemipay.com/pay/ID_FOR_SCARF" target="_blank" class="buy-btn btn">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('Wool Scarf', 18)">➕ Add to Cart</button>
+  </div>
+
+  <!-- Product 9 -->
+  <div class="product">
+    <img id="bagImage" src="images/bag-front.jpg" alt="Bag Front">
+    <h3>Shoulder Bag</h3>
+    <p>Durable leather bag.</p>
+    <button class="toggle-btn btn" onclick="toggleImage('bagImage','images/bag-front.jpg','images/bag-back.jpg')">🔄 View Front/Back</button>
+    <a href="https://checkout.elemipay.com/pay/ID_FOR_BAG" target="_blank" class="buy-btn btn">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('Shoulder Bag', 60)">➕ Add to Cart</button>
+  </div>
+
+  <!-- Product 10 -->
+  <div class="product">
+    <img id="HGR BODY" src="6.jpg" alt="Watch Front">
+    <h3>GFF</h3>
+    <p>El.</p>
+    <button class="toggle-btn btn" onclick="toggleImage('7.jpg','images/pk white front.jpg')">🔄 View Front/Back</button>
+    <a href="https://checkout.elemipay.com/pay/ID_FOR_WATCH" target="_blank" class="buy-btn btn">🛒 Buy Now</a>
+    <button class="cart-btn btn" onclick="addToCart('Branded Watch', 90)">➕ Add to Cart</button>
+  </div>
+
+</section>
+ 
+
+  <!-- Cart Section -->
+  <section id="cart">
+    <h2>Your Cart</h2>
+    <ul id="cartItems"></ul>
+    <p><strong>Total:</strong> RWF <span id="cartTotal">0</span></p>
+  </section>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h2>René Clothing</h2>
+        <p>Style that speaks for you.</p>
+      </div>
+      <div class="footer-links">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#shop">Shop</a></li>
+          <li><a href="#cart">Cart</a></li>
+          <li><a href="#about">About Us</a></li>
+        </ul>
+      </div>
+      <div class="footer-contact">
+        <h3>Contact Us</h3>
+        <p>Email: contact@reneclothing.com</p>
+        <p>Phone: +250 123 456 789</p>
+        <p>Kigali, Rwanda</p>
+      </div>
+      <div class="footer-social">
+        <h3>Follow Us</h3>
+        <a href="https://facebook.com/reneclothing" target="_blank">Facebook</a> |
+        <a href="https://instagram.com/reneclothing" target="_blank">Instagram</a> |
+        <a href="https://twitter.com/reneclothing" target="_blank">Twitter</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 René Clothing. All Rights Reserved.</p>
+    </div>
+  </footer>
+
+  <!-- Script -->
+  <script>
+    let cart = [];
+    let total = 0;
+
+    function toggleImage(imageId, frontSrc, backSrc) {
+      const img = document.getElementById(imageId);
+      if (img.src.endsWith(frontSrc)) {
+        img.src = backSrc;
+        img.alt = img.alt.replace("Front", "Back");
+      } else {
+        img.src = frontSrc;
+        img.alt = img.alt.replace("Back", "Front");
+      }
+    }
+
+    function addToCart(productName, price) {
+      cart.push({ name: productName, price: price });
+      total += price;
+      updateCart();
+    }
+
+
+    function updateCart() {
+      const cartList = document.getElementById("cartItems");
+      cartList.innerHTML = "";
+      cart.forEach(item => {
+        const li = document.createElement("li");
+        li.textContent = `${item.name} - RWF ${item.price}`;
+        cartList.appendChild(li);
+      });
+      document.getElementById("cartTotal").textContent = total;
+    }
+
+    // Theme Toggle with Memory
+    function toggleTheme() {
+      document.body.classList.toggle("dark-theme");
+      if (document.body.classList.contains("dark-theme")) {
+        localStorage.setItem("theme", "dark");
+      } else {
+        localStorage.setItem("theme", "light");
+      }
+    }
+
+    // Load saved theme preference
+    window.onload = function() {
+      const savedTheme = localStorage.getItem("theme");
+      if (savedTheme === "dark") {
+        document.body.classList.add("dark-theme");
+      }
+    }
+  </script>
+
+</body>
+</html>
